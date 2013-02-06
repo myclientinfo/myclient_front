@@ -5,8 +5,23 @@
    ========================================================================== */
 
 
+.hero-unit {
+	position: relative;
+	padding: 10px 50px;
+	margin-bottom: 40px;
+	border: 2px solid #999999;
+	border-bottom-width: 3px;
+	border-bottom-color: #666;
+}
 
+.hero-unit img {
+	z-index: 100;
+}
 
+.hero-unit h1 {
+	margin-bottom: 12px;
+	font-size: 45px;
+}
 
 
 
