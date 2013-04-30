@@ -1,168 +1,446 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
-        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="css/main.css">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=100%; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;" />
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>Home Page</title>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <link href="css/font-awesome-ie7.css" type="text/css" rel="stylesheet"/>
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <link href="css/prettyPhoto.css" type="text/css" rel="stylesheet"/>
+    <link href="css/layerslider.css" type="text/css" rel="stylesheet"/>
+    <link href="css/skin.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.quicksand.js"></script>
+    <script type="text/javascript" src="js/superfish.js"></script>
+    <script type="text/javascript" src="js/hoverIntent.js"></script>
+    <script type="text/javascript" src="js/jquery.hoverdir.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="js/jflickrfeed.min.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/jquery.elastislide.js"></script>
+    <script type="text/javascript" src="js/jquery.tweet.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.totop.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/ajax-mail.js"></script>
+    <script type="text/javascript" src="js/accordion.settings.js"></script>
+    <script src="js/jQuery.BlackAndWhite.min.js"></script>
+    <script src="js/layerslider.kreaturamedia.jquery.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+</head>
 
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+<body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#layerslider').layerSlider({
+            skinsPath : './skins/',
+            skin : 'fullwidth',
+            thumbnailNavigation : 'hover',
+            hoverPrevNext : false
+        });
+        $('ul.nav').superfish({
+            speed : 1
+        });
+        $("[rel=tooltip]").tooltip();
+    });
+ </script>
+<section class="message-top">
+    <div>
+               <div class="notification container">
+                   <a href="#myModal" role="button" data-toggle="modal" class="btn btn-large btn-danger pull-right">Sign Up</a>
 
-        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="#">Project name</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li class="nav-header">Nav header</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <form class="navbar-form pull-right">
-                            <input class="span2" type="text" placeholder="Email">
-                            <input class="span2" type="password" placeholder="Password">
-                            <button type="submit" class="btn">Sign in</button>
-                        </form>
-                    </div><!--/.nav-collapse -->
-                </div>
+                   <a href="#myModal2" role="button" data-toggle="modal" class="btn btn-large btn-info pull-right">Sign In</a>
+                   <!-- Registration Form -->
+                   <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                       <div class="modal-header">
+                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                           <h3 id="myModalLabel">Sign Up here</h3>
+                       </div>
+                       <div class="modal-body">
+                           <form class="form-horizontal">
+                               <div class="control-group">
+                                   <label class="control-label" for="inputEmail">Email</label>
+                                   <div class="controls">
+                                       <input type="text" id="inputE-mail-new" placeholder="Email">
+                                   </div>
+                               </div>
+                               <div class="control-group">
+                                   <label class="control-label" for="inputPassword">Password</label>
+                                   <div class="controls">
+                                       <input type="password" id="inputPassword-new" placeholder="Password">
+                                   </div>
+                                   <label class="control-label" for="inputPassword">Confirm Password</label>
+                                   <div class="controls">
+                                       <input type="password" id="inputPassword-new-confirm" placeholder="Password">
+                                   </div>
+                               </div>
+                            </form>
+                       </div>
+                       <div class="modal-footer">
+                           <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                           <button class="btn btn-danger">Sign Up</button>
+                       </div>
+                   </div>
+                   <!-- Login Form -->
+                   <div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                       <div class="modal-header">
+                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                           <h3 id="myModalLabel2">Login Form</h3>
+                       </div>
+                       <div class="modal-body">
+                           <form class="form-horizontal">
+                               <div class="control-group">
+                                   <label class="control-label" for="inputEmail">Email</label>
+                                   <div class="controls">
+                                       <input type="text" id="inputE-mail" placeholder="Email">
+                                   </div>
+                               </div>
+                               <div class="control-group">
+                                   <label class="control-label" for="inputPassword">Password</label>
+                                   <div class="controls">
+                                       <input type="password" id="inputPassword" placeholder="Password">
+                                   </div>
+                               </div>
+                               <div class="control-group">
+                                   <div class="controls">
+                                       <label class="checkbox">
+                                           <input type="checkbox"> Remember me
+                                       </label>
+                                       <button type="submit" class="btn">Sign in</button>
+                                   </div>
+                               </div>
+                           </form>
+                       </div>
+                       <div class="modal-footer">
+                           <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                           <button class="btn btn-danger">Sign In</button>
+                       </div>
+                   </div>
+        </div>
+    </div>
+</section>
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="span3 logo">
+                <a href="./index.html"><img src="images/logo.png" alt="logo"/></a>
             </div>
+
+            <nav id="menu" class="pull-right">
+                <ul>
+                    <li class="current"><a href="./index.html">Home</a>
+                        
+                    </li>
+                    <li><a href="#section_convenience">Convenience</a></li>
+                    <li><a href="#section_security">Security</a></li>
+                    <li><a href="#section_collaboration" >Collaboration</a></li>
+                    <li><a href="#section_pricing">Pricing</a></li>
+                    <li><a href="#section_contact" >Contact</a></li>
+                </ul>
+            </nav>
+
         </div>
 
-        <div class="container">
+    </div>
+</header>
+<section class="slider-wrap">
+    <div id="layerslider" style="width: 100%; height: 400px; margin: 0px auto; ">
 
-            <!-- Main hero unit for a primary marketing message or call to action -->
-            <!--
-            <div class="hero-unit">
-                <h1>Hello, world!</h1>
-                <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        <div class="ls-layer" style="slidedirection: top; slidedelay: 4000; durationin: 1500; durationout: 1500; delayout: 500;">
+            <img src="./gallery/img2.png" class="ls-bg">
+            <p class="ls-s2 l1-s1" style="position: absolute; top:240px; left: 50%; slidedirection : bottom; slideoutdirection : left; durationin : 3000; durationout : 750; easingout : easeInBack; delayin : 1000;">A new way to store and manage critical client access information - securely, quickly, and reliably.</p>
+
+        </div>
+
+        <div class="ls-layer" style="slidedirection: right; slidedelay: 4000; durationin: 1500; durationout: 1500;">
+
+            <img src="./gallery/img1.png" class="ls-bg">
+            <p class="ls-s2 l2-s1" style="position: absolute; top:30px; left: 0px; slidedirection : fade; slideoutdirection : bottom; durationin : 1500; durationout : 750; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 1000;">Security First architecture means </p>
+            <p class="ls-s3 l2-s1" style="position: absolute; top:73px; left: 0px; slidedirection : fade; slideoutdirection : bottom; durationin : 1500; durationout : 750; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 1500;">Praesent faucibus ultricies metus quis semper. </p>
+
+        </div>
+
+        <div class="ls-layer" style="slidedirection: top; slidedelay: 4000; durationin: 1500; durationout: 1500; delayout: 500;">
+
+            <img src="./gallery/img3.png" class="ls-bg">
+            <p class="ls-s2 l3-s1" style="position: absolute; top:50%; left: 50%; slidedirection : bottom; slideoutdirection : top; durationin : 750; durationout : 750; easingin : easeOutBack; easingout : easeInBack; delayin : 1000;">Pellentesque suscipit, enim quis ultrices lacinia, lectus enim pulvinar sem, quis scelerisque mauris justo a mauris.</p>
+        </div>
+
+    </div>
+</section>
+<nav id="secondary" class="">
+    <a href="#Panel1" class="assets"><i></i><span class="hidden-phone">Showcase Portfolio</span> </a>
+    <a href="#Panel2" class="clients"><i></i><span class="hidden-phone">Manage Customers </span></a>
+    <a href="#panel1" class="mobile"><i></i><span class="hidden-phone">Get Responsive </span></a>
+    <a href="#Panel2" class="communicate"><i></i><span class="hidden-phone">Stay In Touch</span> </a>
+</nav>
+<section id="container">
+    <!--Welcome block goes inside page content but not wrapped in 1170 Container, wrapping is applied inside-->
+    <section id="welcome2">
+        <div class="container welcome2-wrap">
+        <!--<h1>Ut nulla <span>eget massa</span> blandit eleifend sed lacus!</h1>-->
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mi libero. Vestibulum aliquam elit sed eros vehicula pellentesque. Vestibulum quis elit augue.Phasellus enim diam, scelerisque at lobortis quis, mollis mollis sem.“ <span class="welcome-signature pull-right">– Marcus Aurelius, Ancient Rome</span> </p>
+
+        <!--<a class="btn btn-welcome btn-large pull-right">Learn more</a>-->
+        </div>
+    </section>
+
+<div class="container">
+
+    <div class="row highlights">
+        <div class="span3">
+            <i class="icon-cogs"></i>
+            <h3>Customizable</h3>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo.</p>
+
+            <p>
+        </div>
+        <div class="span3">
+            <i class="icon-reorder"></i>
+            <h3>HTML5/CSS3 Code</h3>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo.</p>
+
+            <p>
+        </div>
+        <div class="span3">
+            <i class="icon-user"></i>
+            <h3>User Friendly</h3>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo.</p>
+
+            <p>
+        </div>
+        <div class="span3">
+            <i class="icon-money"></i>
+            <h3>Affordable Price</h3>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo.</p>
+
+            <p>
+        </div>
+    </div>
+    <hr class="invisible">
+    <div id="Panel1" class="row">
+       <div class="span6"><img src="images/combo_devices.png" class="img-rounded"></div>
+       <div class="span6">
+           <h2>We use FontAwesome in features list to give our customers better control over color schemes. Here you can provide a brief list of your advantages over competitors etc:</h2>
+           <ul>
+               <li><i class="icon-check"></i><span>Clean CSS3/HTML5 Code:</span>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mi libero. Vestibulum aliquam elit sed eros vehicula pellentesque.</li>
+               <li><i class="icon-check"></i><span>Responsive Layout:</span>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mi libero. Vestibulum aliquam elit sed eros vehicula pellentesque.</li>
+               <li><i class="icon-check"></i><span>Twitter Bootstrap Based:</span>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mi libero. Vestibulum aliquam elit sed eros vehicula pellentesque.</li>
+               <li><i class="icon-check"></i><span>Clean and Readable Typography:</span>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mi libero. Vestibulum aliquam elit sed eros vehicula pellentesque.</li>
+           </ul>
+
+       </div>
+    </div>
+
+    <div id="Panel2" class="grey-panel row">
+             <div class="span6">
+                <h2>Use different styling options for your features and products:</h2>
+                <ul class="icons">
+                    <li><i class="icon-ok"></i>CLorem ipsum dolor sit amet, consectetur adipiscing elit. In et mi libero. </li>
+                    <li><i class="icon-ok"></i>Vestibulum aliquam elit sed eros vehicula pellentesque. </li>
+                    <li><i class="icon-ok"></i>Result may vary ;-) </li>
+                    <li><i class="icon-ok"></i>Fusce dapibus, tellus ac cursus commodo, tortor mauris</li>
+                    <li><i class="icon-ok"></i>Donec id elit non mi porta gravida at eget metus. Fusce dapibus </li>
+                    <li><i class="icon-ok"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et mi libero.</li>
+                </ul>
+             </div>
+            <div class="span5"><img src="images/combo_devices2.png" class="img-rounded"></div>
+
+    </div>
+    <hr class="invisible" >
+    <div class="row">
+        <div class="span8">
+            <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="item testimonials active">
+                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+
+                    </div>
+                    <div class="item testimonials">
+                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+
+                    </div>
+                    <div class="item testimonials">
+                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+
+                    </div>
+                </div>
+                <a class="left carousel-control control-fix carousel-control-extra" href="#myCarousel" data-slide="prev">‹</a>
+                <a class="right carousel-control carousel-control-extra" href="#myCarousel" data-slide="next">›</a>
             </div>
-            -->
-            
-			     
-			
-			<div class="hero-unit">
-				<h1>Keep The Important Info</h1>
-				<p>Lost connection information costs you money. Keeping an up to date, secure, and shared source for your client or project information is the only professional option.</p>
-			</div>
-			
-			<div class="hero-unit">
-				<h1>Move Beyond ClientLogins.xls</h1>
-			
-				<p>Alarming numbers of studios store critical client information in insecure and overly accessible file formats.  These files risk being stolen, duplicated, or inadvertently deleted. The best case scenario is an out-of-date record with continual access conflicts.</p>
-			</div>
-			
-			<div class="hero-unit">
-			
-				<img src="/img/safe.png" style="position: absolute; right: 20px; top: -40px;" />
-				
-					
-				<div class="row">
-				<div class="span8">
-				<h1>Move Into Security</h1>
-				
-				<p>Unlike repurposed project management software, or wiki software, MyClient.Info is designed from the ground up for security first and foremost. All aspects of the application and server are built to withstand hacking or intrusion attempts. All client data is encrypted multiple times, using multiple encryption methods, and unique per-account keys.</p>
-			
-				<p>We have a security page to cover these features and discuss risks.</p>
-				
-				<p style="display: none;"><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-				</div>
-				</div>
-			</div>
-			
-			<div class="hero-unit">
-				<h1>One Login – It’s All There</h1>
-			
-				<p>As a developer the amount of information that must be tracked and maintained can sometimes be a challenge. FTP connection details, database access, control panels, Wordpress admins, domain registrars, CMS access, Twitter and Facebook access. Losing any one of these could be a catastrophe. Having them all in one place and close at  hand will save you money.</p>
-			</div>
-			
-			<div class="hero-unit">
-				
-				<img src="/img/screens.png" style="position: absolute; left: 20px; top: -40px;" />
-				
-				<div class="row">
-				<div class="span8 offset3">
-				
-					<h1>Access Anywhere</h1>
-				
-					<p>Working from home, at the office, or on the way to a meeting, you will always have access to critical </p>
-					
-					<p>Working from home, at the office, or on the way to a meeting, you will always have access to critical </p>
-					
-					<p>Working from home, at the office, or on the way to a meeting, you will always have access to critical </p>
-					
-				</div>
-				</div>
-			</div>
-			
-			<div class="hero-unit">
-				<h1>Secure</h1>
-			
-			
-				<p>An alarming number of developers and agencies are storing client data insecurely. Clientdata.xls is not a solution, nor is emailing the information around the company as needed.</p>
-			</div>
-			
+        </div>
+        <div class="span4">
+
+                <ul class="nav nav-tabs" id="myTab">
+                    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                    <li class=""><a data-toggle="tab" href="#profile">Profile</a></li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class=""><a data-toggle="tab" href="#dropdown1">@fat</a></li>
+                            <li class=""><a data-toggle="tab" href="#dropdown2">@mdo</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div id="home" class="tab-pane fade active in">
+                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                    </div>
+                    <div id="profile" class="tab-pane fade">
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                    </div>
+                    <div id="dropdown1" class="tab-pane fade">
+                        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                    </div>
+                    <div id="dropdown2" class="tab-pane fade">
+                        <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+                    </div>
+                </div>
 
 
-            <hr>
+        </div>
+    </div>
+</div>
 
-            <footer>
-                <p>&copy; Company 2012</p>
-            </footer>
 
-        </div> <!-- /container -->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+</section>
 
-        <script src="js/vendor/bootstrap.min.js"></script>
+<!--footer-->
+<footer id="footer">
+    <div class="container">
+    <div class="row">
+        <div class="span3">
+            <h3>About Us</h3>
+            <img src="images/logo-mini.png">
+            <p class="footer-text"><span>Crypton is a stylish template aimed at success.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in lacus rhoncus elit egestas luctus. Nullam at lectus augue.</p>
+            <p class="footer-social">
+                <a href="#" rel="tooltip" title="Twitter"><i class="icon-twitter-sign"></i></a>
+                <a href="#" rel="tooltip" title="FaceBook"><i class="icon-facebook-sign"></i></a>
+                <a href="#" rel="tooltip" title="LinkedIn"><i class="icon-linkedin-sign"></i></a>
+                <a href="#" rel="tooltip" title="GooglePlus"><i class="icon-google-plus-sign"></i></a>
+                <a href="#" rel="tooltip" title="Pinterest"><i class="icon-pinterest-sign"></i></a>
+            </p>
+        </div>
+        <div class="span3">
+            <h3>Flickr Photos</h3>
+            <ul class="flickr clearfix"></ul>
+        </div>
+        <div class="span3">
+            <h3>Contact Form</h3>
+            <form id="contact" class="form-horizontal" method="post">
+                <div class="control-group">
+                    <label class="control-label" for="inputName">Name</label>
+                    <div class="controls">
+                        <input type="text" id="inputName" placeholder="Name" name="inputName">
+                        <label class="ferror" for="inputName" id="fname_error">Name is required.</label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">Email</label>
+                    <div class="controls">
+                        <input type="text" id="inputEmail" placeholder="Email" name="inputEmail">
+                        <label class="ferror" for="inputEmail" id="femail_error">Email is required.</label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="inputMessage"></label>
+                    <div class="controls">
+                        <textarea rows="3" id="inputMessage" name="inputMessage"></textarea>
+                        <label class="ferror" for="inputMessage" id="fmessage_error">Message is required.</label>
+                    </div>
+                </div>
+                <div class="submit-div">
+                    <input type="submit" class="btn pull-right footer-button" value="SUBMIT!">
+                </div>
+            </form>
+        </div>
+        <div class="span3">
+            <h3>Address</h3>
+            <address>
+                Companyname inc.<br>
+                London,  Baker Street, 90210<br>
+                <i class="myicon-phone"></i><span style="color:#FFF;font-weight:600;">(123) 456-7890</span><br>
+                <i class="myicon-mail"></i><span style="color:#FFF;font-weight:600;">info@dxthemes.com</span>
+            </address>
+            Ut eu nulla eget massa blandit eleifend vel sedis lacus. Sed at viverra nulla. Fusce vel adipisci odio. Phasellus commodo, mauris eget pharetra scelerisque, est justo lacinia tortor.
+        </div>
+    </div>
+        <div class="row">
+        <div class="span3 footer-links">
+            <h3>Friends</h3>
+            <ul>
+                <li><i class="icon-minus"></i><a href="#">Lorem ipsum dolor sit amet</a></li>
+                <li><i class="icon-minus"></i><a href="#">Qui qunta negat omnia dat</a></li>
+                <li><i class="icon-minus"></i><a href="#">Ad arma teneti</a></li>
+                <li><i class="icon-minus"></i><a href="#">Lorem ipsum quanta negar</a></li>
+                <li><i class="icon-minus"></i><a href="#">Sobra vamitus quamo serat</a></li>
+                <li><i class="icon-minus"></i><a href="#">Vinci pare bellum sana</a></li>
+                <li><i class="icon-minus"></i><a href="#">Lobricus mortae magnum felicea</a></li>
+                <li><i class="icon-minus"></i><a href="#">Omnius desponsi que esta</a></li>
+                <li><i class="icon-minus"></i><a href="#">Lorem ipsum quanta negar</a></li>
 
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+            </ul>
+             </div>
+        <div class="span3 footer-links">
+            <h3>Partners</h3>
+            <ul>
+                <li><i class="icon-ok"></i><a href="#">Lorem ipsum dolor sit amet</a></li>
+                <li><i class="icon-ok"></i><a href="#">Qui qunta negat omnia dat</a></li>
+                <li><i class="icon-ok"></i><a href="#">Ad arma teneti</a></li>
+                <li><i class="icon-ok"></i><a href="#">Lorem ipsum quanta negar</a></li>
+                <li><i class="icon-ok"></i><a href="#">Sobra vamitus quamo serat</a></li>
+                <li><i class="icon-ok"></i><a href="#">Vinci pare bellum sana</a></li>
+                <li><i class="icon-ok"></i><a href="#">Lobricus mortae magnum felicea</a></li>
+                <li><i class="icon-ok"></i><a href="#">Omnius desponsi que esta</a></li>
+                <li><i class="icon-ok"></i><a href="#">Lorem ipsum quanta negar</a></li>
 
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
+            </ul>
+        </div>
+        <div class="span6 footer-links">
+            <h3>Important Links</h3>
+            <ul>
+                <li><i class="icon-star"></i><a href="#">Lorem ipsum dolor sit amet</a></li>
+                <li><i class="icon-star"></i><a href="#">Qui qunta negat omnia dat</a></li>
+                <li><i class="icon-star"></i><a href="#">Ad arma teneti</a></li>
+                <li><i class="icon-star-empty"></i><a href="#">Lorem ipsum quanta negar</a></li>
+
+
+            </ul>
+        </div>
+
+    </div>
+    </div>
+</footer>
+
+<!--footer menu-->
+<section id="footer-menu">
+    <div class="container">
+        <div class="row">
+            <div class="span8 hidden-phone">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <p class="span4"><span class="pull-right">Copyright 2012 - All Rights Reserved, Created by <a href="http://dxthemes.com">DXThemes.com</a></span></p>
+        </div>
+    </div>
+</section>
+
+</body>
 </html>
