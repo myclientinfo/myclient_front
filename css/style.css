@@ -300,36 +300,13 @@ button.close {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#2c2c2c',GradientType=0 ); /* IE6-8 */    color: #0AD1E5;
 }
 
-#secondary .assets i {
-    background: url("../images/assets.png") no-repeat scroll 15px 4px transparent;
-    height: 32px;
-    width: 60px;
-}
-#secondary .assets:hover i{
-    background-position: 15px -29px;
-}
-#secondary .clients i {
-    background: url("../images/clients.png") no-repeat scroll 15px 4px transparent;
-    height: 32px;
-    width: 60px;
-}
-#secondary .clients:hover i{
-    background-position: 15px -29px;
-}#secondary .mobile i {
-    background: url("../images/media.png") no-repeat scroll 15px 4px transparent;
-    height: 32px;
-    width: 60px;
-}
-#secondary .mobile:hover i{
-    background-position: 15px -29px;
-}
-#secondary .communicate i {
-    background: url("../images/communicate.png") no-repeat scroll 15px 4px transparent;
-    height: 32px;
-    width: 60px;
-}
-#secondary .communicate:hover i{
-    background-position: 15px -29px;
+
+
+#secondary i {
+	font-size: 25px;
+	position: relative;
+	left: -10px;
+	top: 5px;
 }
 
 #secondary i, #secondary a {
